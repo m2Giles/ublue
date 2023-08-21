@@ -63,7 +63,8 @@ rpm:
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
-    - qemu qemu-user-static
+    - qemu
+    - qemu-user-static
     - qemu-user-binfm
     - virt-manage
     - libvirt
