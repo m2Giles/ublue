@@ -56,6 +56,29 @@ rpm:
   install:
     - python3-pip
     - libadwaita
+    - pcsc-tools
+    - gnome-shell-extension-appindicator
+    - gnome-shell-extension-caffeine
+    - gnome-shell-extension-blur-my-shell
+    - pulseaudio-utils
+    - p7zip
+    - p7zip-plugins
+    - qemu qemu-user-static
+    - qemu-user-binfm
+    - virt-manage
+    - libvirt
+    - edk2-ovmf
+    - genisoimage
+    - qemu-img
+    - qemu-system-x86-core
+    - qemu-char-spice
+    - qemu-device-usb-redirect
+    - qemu-device-display-virtio-vga
+    - qemu-device-display-virtio-gpu
+    - iotop
+    - dbus-x11
+    - podman-plugins
+    - podman-tui
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
