@@ -65,10 +65,11 @@ rpm:
     - p7zip-plugins
     - qemu
     - qemu-user-static
-    - qemu-user-binfm
-    - virt-manage
+    - qemu-user-binfmt
+    - virt-manager
     - libvirt
     - edk2-ovmf
+    - swtpm
     - genisoimage
     - qemu-img
     - qemu-system-x86-core
