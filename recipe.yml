@@ -56,10 +56,10 @@ rpm:
   install:
     - python3-pip
     - libadwaita
-    - pcsc-tools
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-caffeine
     - gnome-shell-extension-blur-my-shell
+    - guake
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
@@ -81,8 +81,6 @@ rpm:
     - dbus-x11
     - podman-plugins
     - podman-tui
-    - adobe-source-code-pro-fonts
-    - jetbrains-mono-fonts-all
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
