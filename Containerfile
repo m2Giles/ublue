@@ -1,4 +1,4 @@
-# This is the Containerfile for your custom image. 
+# This is the Containerfile for your custom image.
 
 # It takes in the recipe, version, and base image as arguments,
 # all of which are provided by build.yml when doing builds
@@ -26,6 +26,7 @@ ARG IMAGE_REGISTRY=ghcr.io/ublue-os
 # for manual overrides and editing by the machine's admin AFTER installation!
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
+COPY etc /etc
 
 # Copy public key
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
@@ -53,7 +54,7 @@ COPY scripts /tmp/scripts
 RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
         chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
-	systemctl enable podman.socket && \
-	systemctl enable libvirtd.service && \
+        systemctl enable podman.socket && \
+        rm -f /etc/yum.repos.d/vscode.repo && \
         rm -rf /tmp/* /var/* && \
         ostree container commit

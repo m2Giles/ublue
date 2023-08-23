@@ -54,15 +54,14 @@ rpm:
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
   install:
+    # YAFTI
     - python3-pip
     - libadwaita
+    # GNOME Extensions
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-caffeine
     - gnome-shell-extension-blur-my-shell
-    - guake
-    - pulseaudio-utils
-    - p7zip
-    - p7zip-plugins
+    # Virtualization
     - qemu
     - qemu-user-static
     - qemu-user-binfmt
@@ -77,10 +76,18 @@ rpm:
     - qemu-device-usb-redirect
     - qemu-device-display-virtio-vga
     - qemu-device-display-virtio-gpu
-    - iotop
-    - dbus-x11
+    # Podman
     - podman-plugins
     - podman-tui
+    # Utils
+    - iotop
+    - dbus-x11
+    - guake
+    - pulseaudio-utils
+    - p7zip
+    - p7zip-plugins
+    - code
+    # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
     - firacode-nerd-fonts
