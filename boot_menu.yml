@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: m2giles/ublue
+  - label: m2giles/m2-ublue
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: startingpoint
