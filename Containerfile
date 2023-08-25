@@ -64,5 +64,6 @@ RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
         sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
         sed -i '/^PRETTY_NAME/s/Silverblue/m2-ublue/' /usr/lib/os-release && \
         rm -f /etc/yum.repos.d/vscode.repo && \
+        rm -f /etc/yum.repos.d/terra.repo && \
         rm -rf /tmp/* /var/* && \
         ostree container commit
