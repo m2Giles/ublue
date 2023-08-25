@@ -82,7 +82,6 @@ rpm:
     # Utils
     - iotop
     - dbus-x11
-    - guake
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
