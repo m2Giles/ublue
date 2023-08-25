@@ -11,3 +11,6 @@ setup-flatpaks:
   done
 
 # Include some of your custom scripts here!
+toolbox-boxkit
+  echo 'Creating a BoxKit Toolbox...'
+  toolbox create --image ghcr.io/ublue-os/boxkit boxtool-${RANDOM}

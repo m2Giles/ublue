@@ -27,6 +27,7 @@ ARG IMAGE_REGISTRY=ghcr.io/ublue-os
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
 COPY usr/etc/yum.repos.d /etc/yum.repos.d
+COPY usr/etc/systemd/system /etc/systemd/system
 
 # Copy public key
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
@@ -54,7 +55,14 @@ COPY scripts /tmp/scripts
 RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
         chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
+        systemctl unmask dconf-update.service && \
+        systemctl enable dconf-update.service && \
         systemctl enable podman.socket && \
+        rm -f /usr/share/applications/htop.desktop && \
+        rm -f /usr/share/applications/nvtop.desktop && \
+        sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
+        sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
+        sed -i '/^PRETTY_NAME/s/Silverblue/m2-ublue/' /usr/lib/os-release && \
         rm -f /etc/yum.repos.d/vscode.repo && \
         rm -rf /tmp/* /var/* && \
         ostree container commit
