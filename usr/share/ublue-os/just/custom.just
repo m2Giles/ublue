@@ -11,6 +11,13 @@ setup-flatpaks:
   done
 
 # Include some of your custom scripts here!
-toolbox-boxkit
-  echo 'Creating a BoxKit Toolbox...'
-  toolbox create --image ghcr.io/ublue-os/boxkit boxtool-${RANDOM}
+#toolbox-boxkit:
+#  echo 'Creating a BoxKit Toolbox...'
+#  toolbox create --image ghcr.io/ublue-os/boxkit boxtool-${RANDOM}
+
+# Install starship in home
+starship-me-up:
+  #!/usr/bin/env bash
+  echo 'Installing starship binary to homedir...'
+  [ ! -d ~/.local/bin ] && mkdir ~/.local/bin
+  cp /usr/bin/starship ~/.local/bin/
