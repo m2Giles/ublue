@@ -26,6 +26,7 @@ ARG IMAGE_REGISTRY=ghcr.io/ublue-os
 # for manual overrides and editing by the machine's admin AFTER installation!
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
+COPY usr/etc/dconf /etc/dconf
 COPY usr/etc/yum.repos.d /etc/yum.repos.d
 COPY usr/etc/systemd/system /etc/systemd/system
 
