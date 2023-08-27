@@ -24,9 +24,28 @@ switch-windows-backward = ['<Shift><Alt>Tab']
 tap-to-click=true
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-binding='<Super>Return'
+binding=['<Super>Return']
 command='gnome-terminal'
 name='gnome-terminal'
+
+[org/gnome/shell/extensions/just-perfection]
+accessibility-menu=true
+activities-button=true
+app-menu=true
+app-menu-icon=true
+dash-icon-size=0
+panel=true
+panel-in-overview=true
+ripple-box=true
+search=true
+show-apps-button=true
+startup-status=0
+theme=false
+window-demands-attention-focus=false
+window-picker-icon=true
+workspace=true
+workspace-wrap-around=true
+workspaces-in-app-grid=true
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'

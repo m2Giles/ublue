@@ -59,8 +59,9 @@ rpm:
     - libadwaita
     # GNOME Extensions
     - gnome-shell-extension-appindicator
-    - gnome-shell-extension-caffeine
     - gnome-shell-extension-blur-my-shell
+    - gnome-shell-extension-caffeine
+    - gnome-shell-extension-just-perfection
     # Virtualization
     - qemu
     - qemu-user-static
@@ -86,7 +87,6 @@ rpm:
     - p7zip
     - p7zip-plugins
     - code
-    #- starship
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
@@ -96,7 +96,6 @@ rpm:
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - gnome-extensions-app
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:

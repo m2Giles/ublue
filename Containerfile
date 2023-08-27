@@ -29,6 +29,7 @@ COPY usr /usr
 COPY usr/etc/dconf /etc/dconf
 COPY usr/etc/yum.repos.d /etc/yum.repos.d
 COPY usr/etc/systemd/system /etc/systemd/system
+COPY usr/etc/skel.d /etc/skel.d
 
 # Copy public key
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
@@ -61,6 +62,7 @@ RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
         systemctl enable podman.socket && \
         rm -f /usr/share/applications/htop.desktop && \
         rm -f /usr/share/applications/nvtop.desktop && \
+        rm -f /usr/share/applications/org.gnome.Extensions.desktop && \
         sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
         sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
         sed -i '/^PRETTY_NAME/s/Silverblue/m2-ublue/' /usr/lib/os-release && \
