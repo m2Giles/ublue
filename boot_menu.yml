@@ -3,3 +3,9 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: m2-ublue
+        info: GNOME
+  - label: m2giles/m2-ublue-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: m2-ublue-nvidia
+        info: GNOME (nvidia)
