@@ -2,6 +2,13 @@
 favorite-apps = ['firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'org.gnome.Terminal.desktop']
 enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx','caffeine@patapon.info']
 
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/woods.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/woods.jpg'
+picture-options='stretched'
+primary-color='000000'
+secondary-color='FFFFFF'
+
 [org/gnome/desktop/interface]
 clock-show-weekday=true
 font-antialiasing="rgba"
