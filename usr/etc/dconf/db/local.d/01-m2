@@ -1,25 +1,22 @@
 [org/gnome/shell]
-favorite-apps = ['firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'org.gnome.Terminal.desktop']
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx','caffeine@patapon.info']
+favorite-apps = ['firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'com.raggesilver.BlackBox.desktop']
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx','caffeine@patapon.info','just-perfection-desktop@just-perfection']
 
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/woods.jpg'
 picture-uri-dark='file:///usr/share/backgrounds/woods.jpg'
-picture-options='stretched'
+picture-options='zoom'
 primary-color='000000'
 secondary-color='FFFFFF'
 
 [org/gnome/desktop/interface]
 clock-show-weekday=true
 font-antialiasing="rgba"
-monospace-font-name="CaskaydiaCove Nerd Font 14"
+monospace-font-name="CaskaydiaCove Nerd Font 12"
 color-scheme="prefer-dark"
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
-
-[org/gnome/desktop/wm/preferences]
-title-bar-font="Caskaydia Cove Nerd Font Bold 12"
 
 [org/gnome/desktop/wm/keybindings]
 switch-applications = ['<Super>Tab']
@@ -31,9 +28,9 @@ switch-windows-backward = ['<Shift><Alt>Tab']
 tap-to-click=true
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-binding=['<Super>Return']
-command='gnome-terminal'
-name='gnome-terminal'
+binding='<Super>Return'
+command='flatpak run com.raggesilver.BlackBox'
+name='flatpak run com.raggesilver.BlackBox'
 
 [org/gnome/shell/extensions/just-perfection]
 accessibility-menu=true
