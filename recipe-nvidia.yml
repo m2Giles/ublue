@@ -87,8 +87,6 @@ rpm:
     - p7zip
     - p7zip-plugins
     - code
-    # Codecs
-    #- gstreamer1-plugins-bad-freeworld
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
@@ -119,4 +117,4 @@ firstboot:
     - com.raggesilver.BlackBox
     - com.obsproject.Studio
     - org.libreoffice.LibreOffice
-    - com.github.IsmaelMatrinez.teams_for_linux
+    - com.github.IsmaelMartinez.teams_for_linux

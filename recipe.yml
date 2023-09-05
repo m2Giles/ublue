@@ -86,9 +86,7 @@ rpm:
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
-    - code
-    # Codecs
-    - gstreamer1-plugins-bad-freeworld    
+    - code 
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
@@ -119,6 +117,6 @@ firstboot:
     - com.raggesilver.BlackBox
     - com.obsproject.Studio
     - com.obsproject.Studio.Plugin.Gstreamer
-    - com.obsproject.Studio.Plugin.GStreamerVaapi
+    - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
     - org.libreoffice.LibreOffice
-    - com.github.IsmaelMatrinez.teams_for_linux
+    - com.github.IsmaelMartinez.teams_for_linux
