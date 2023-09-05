@@ -87,6 +87,8 @@ rpm:
     - p7zip
     - p7zip-plugins
     - code
+    # Codecs
+    - gstreamer1-plugins-bad-freeworld    
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
