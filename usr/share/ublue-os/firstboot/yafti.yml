@@ -85,7 +85,7 @@ screens:
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
             - Font Downloader: org.gustavoperedo.FontDownloader
-            - Mozilla Firefox: org.mozilla.firefox
+            #- Mozilla Firefox: org.mozilla.firefox
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
@@ -93,6 +93,7 @@ screens:
             - Brave: com.brave.Browser
             - Google Chrome: com.google.Chrome
             - Microsoft Edge: com.microsoft.Edge
+            - Mozilla Firefox: org.mozilla.firefox
             - Opera: com.opera.Opera
         Gaming:
           description: "Rock and Stone!"

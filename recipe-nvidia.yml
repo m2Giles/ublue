@@ -112,3 +112,9 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+    - com.sindresorhus.Caprine
+    - com.discordapp.Discord
+    - com.raggesilver.BlackBox
+    - com.obsproject.Studio
+    - org.libreoffice.LibreOffice
+    - com.github.IsmaelMatrinez.teams_for_linux
