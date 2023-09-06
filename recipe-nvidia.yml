@@ -62,6 +62,11 @@ rpm:
     - gnome-shell-extension-blur-my-shell
     - gnome-shell-extension-caffeine
     - gnome-shell-extension-just-perfection
+    - gnome-shell-extension-dash-to-dock
+    - gnome-shell-extension-gsconnect
+    # Pano Dependencies
+    - libgda
+    - libgda-sqlite
     # Virtualization
     - qemu
     - qemu-user-static

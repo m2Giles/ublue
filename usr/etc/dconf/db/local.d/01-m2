@@ -1,6 +1,6 @@
 [org/gnome/shell]
 favorite-apps = ['firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'com.raggesilver.BlackBox.desktop']
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx','caffeine@patapon.info','just-perfection-desktop@just-perfection']
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx','caffeine@patapon.info','just-perfection-desktop@just-perfection','pano@elhan.io']
 
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/woods.jpg'
@@ -45,7 +45,7 @@ search=true
 show-apps-button=true
 startup-status=0
 theme=false
-window-demands-attention-focus=false
+window-demands-attention-focus=true
 window-picker-icon=true
 workspace=true
 workspace-wrap-around=true
