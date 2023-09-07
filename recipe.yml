@@ -123,7 +123,7 @@ firstboot:
     - com.raggesilver.BlackBox
     - com.obsproject.Studio
     - com.obsproject.Studio.Plugin.Gstreamer
-    - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
+    - com.obsproject.Studio.Plugin.GStreamerVaapi
     - org.libreoffice.LibreOffice
     - com.github.IsmaelMartinez.teams_for_linux
     - org.gnome.World.PikaBackup
