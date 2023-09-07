@@ -30,6 +30,7 @@ COPY usr/etc/dconf /etc/dconf
 COPY usr/etc/yum.repos.d /etc/yum.repos.d
 COPY usr/etc/systemd/system /etc/systemd/system
 COPY usr/etc/skel.d /etc/skel.d
+COPY usr/etc/distrobox /etc/distrobox
 
 # Copy public key
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
