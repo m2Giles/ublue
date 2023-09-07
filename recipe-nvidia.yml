@@ -92,6 +92,7 @@ rpm:
     - p7zip
     - p7zip-plugins
     - code
+    - git-credential-libsecret
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
