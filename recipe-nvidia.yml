@@ -123,3 +123,4 @@ firstboot:
     - com.obsproject.Studio
     - org.libreoffice.LibreOffice
     - com.github.IsmaelMartinez.teams_for_linux
+    - org.gnome.World.PikaBackup

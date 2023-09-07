@@ -125,3 +125,4 @@ firstboot:
     - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
     - org.libreoffice.LibreOffice
     - com.github.IsmaelMartinez.teams_for_linux
+    - org.gnome.World.PikaBackup
