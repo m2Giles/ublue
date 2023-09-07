@@ -21,3 +21,10 @@ starship-me-up:
   echo 'Installing starship binary to homedir...'
   [ ! -d ~/.local/bin ] && mkdir ~/.local/bin
   cp /usr/bin/starship ~/.local/bin/
+
+# Assemble Distrobox Containers
+assemble-distrobox:
+  #!/usr/bin/env bash
+  mkdir -p "$HOME/Containers/arch-develop"
+  mkdir -p "$HOME/Containers/arch-latex"
+  distrobox assemble create --file /etc/distrobox/distrobox.ini
