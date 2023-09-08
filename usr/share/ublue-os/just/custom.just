@@ -25,6 +25,6 @@ starship-me-up:
 # Assemble Distrobox Containers
 assemble-distrobox:
   #!/usr/bin/env bash
-  mkdir -p "$HOME/Containers/arch-develop"
-  mkdir -p "$HOME/Containers/arch-latex"
-  distrobox assemble create --file /etc/distrobox/distrobox.ini
+  [[ ! -d ~/Containers/arch-devel ]] && mkdir -p ~/Containers/arch-devel
+  [[ ! -d ~/Containers/arch-latex ]] && mkdir -p ~/Containers/arch-latex
+  distrobox assemble create --file /usr/etc/distrobox/distrobox.ini
