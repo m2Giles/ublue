@@ -28,3 +28,11 @@ assemble-distrobox:
   [[ ! -d ~/Containers/arch-devel ]] && mkdir -p ~/Containers/arch-devel
   [[ ! -d ~/Containers/arch-latex ]] && mkdir -p ~/Containers/arch-latex
   distrobox assemble create --file /usr/etc/distrobox/distrobox.ini
+
+# Setup VSCode to connect to Distrobox Named Containers
+VSCode-Containers
+  #!/usr/bin/env bash
+  local path=${XDG_CONFIG_HOME:-${HOME}/.config}/Code/User/globalStorage/ms-vscode-remote.remote.containers/nameConfigs
+  [[ ! -d "$path" ]] && mkdir -p $path
+  cp /usr/share/ublue-os/ContainerSetup/arch-devel.json "$path"
+  cp /usr/share/ublue-os/ContainerSetup/arch-latex.json "$path"
