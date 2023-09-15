@@ -30,7 +30,7 @@ assemble-distrobox:
   distrobox assemble create --file /usr/etc/distrobox/distrobox.ini
 
 # Setup VSCode to connect to Distrobox Named Containers
-VSCode-Containers
+VSCode-Containers:
   #!/usr/bin/env bash
   local path=${XDG_CONFIG_HOME:-${HOME}/.config}/Code/User/globalStorage/ms-vscode-remote.remote.containers/nameConfigs
   [[ ! -d "$path" ]] && mkdir -p $path
