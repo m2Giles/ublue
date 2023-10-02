@@ -95,6 +95,7 @@ rpm:
     - git-credential-libsecret
     - mozilla-ublock-origin
     - mozilla-privacy-badger
+    - glibc-debuginfo
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
