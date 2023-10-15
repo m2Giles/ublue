@@ -92,6 +92,7 @@ rpm:
     - p7zip
     - p7zip-plugins
     - code
+    - emacs
     - git-credential-libsecret
     - mozilla-ublock-origin
     - mozilla-privacy-badger

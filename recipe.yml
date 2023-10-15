@@ -91,7 +91,8 @@ rpm:
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
-    - code 
+    - code
+    - emacs
     - git-credential-libsecret
     - mozilla-ublock-origin
     - mozilla-privacy-badger
