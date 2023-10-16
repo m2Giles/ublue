@@ -68,20 +68,20 @@ rpm:
     - libgda
     - libgda-sqlite
     # Virtualization
-    - qemu
-    - qemu-user-static
-    - qemu-user-binfmt
-    - virt-manager
-    - libvirt
-    - edk2-ovmf
-    - swtpm
-    - genisoimage
-    - qemu-img
-    - qemu-system-x86-core
-    - qemu-char-spice
-    - qemu-device-usb-redirect
-    - qemu-device-display-virtio-vga
-    - qemu-device-display-virtio-gpu
+    #- qemu
+    #- qemu-user-static
+    #- qemu-user-binfmt
+    #- virt-manager
+    #- libvirt
+    #- edk2-ovmf
+    #- swtpm
+    #- genisoimage
+    #- qemu-img
+    #- qemu-system-x86-core
+    #- qemu-char-spice
+    #- qemu-device-usb-redirect
+    #- qemu-device-display-virtio-vga
+    #- qemu-device-display-virtio-gpu
     # Podman
     - podman-plugins
     - podman-tui
