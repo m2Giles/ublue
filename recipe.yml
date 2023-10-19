@@ -68,6 +68,7 @@ rpm:
     - podman-plugins
     - podman-tui
     # Utils
+    - cmake
     - iotop
     - dbus-x11
     - pulseaudio-utils
