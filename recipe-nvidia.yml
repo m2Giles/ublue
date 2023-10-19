@@ -62,44 +62,28 @@ rpm:
     - gnome-shell-extension-blur-my-shell
     - gnome-shell-extension-caffeine
     - gnome-shell-extension-just-perfection
-    - gnome-shell-extension-dash-to-dock
-    - gnome-shell-extension-gsconnect
-    # Pano Dependencies
-    - libgda
-    - libgda-sqlite
-    # Virtualization
-    - qemu
-    - qemu-user-static
-    - qemu-user-binfmt
-    - virt-manager
-    - libvirt
-    - edk2-ovmf
-    - swtpm
-    - genisoimage
-    - qemu-img
-    - qemu-system-x86-core
-    - qemu-char-spice
-    - qemu-device-usb-redirect
-    - qemu-device-display-virtio-vga
-    - qemu-device-display-virtio-gpu
+    # GTK-Theme
+    - gnome-themes-extra
     # Podman
     - podman-plugins
     - podman-tui
     # Utils
-    - gnome-themes-extra
     - iotop
     - dbus-x11
     - pulseaudio-utils
     - p7zip
     - p7zip-plugins
-    - code
     - git-credential-libsecret
+    # Firefox Extensions
     - mozilla-ublock-origin
     - mozilla-privacy-badger
     # Fonts
     - cascadiacode-nerd-fonts
     - hack-nerd-fonts
     - firacode-nerd-fonts
+    # Editors
+    - code
+    - emacs
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
