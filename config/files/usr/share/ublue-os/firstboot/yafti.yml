@@ -1,11 +1,11 @@
-title: Welcome to uBlue
+title: Welcome to m2's uBlue
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to uBlue (Alpha)"
+      title: "Welcome to m2's uBlue (Alpha)"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
@@ -22,7 +22,6 @@ screens:
         - run: flatpak remote-delete --user --force fedora
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   check-system-flathub:
     source: yafti.screen.consent
     values:
@@ -33,16 +32,6 @@ screens:
         We have detected that you don't have Flathub's repository on your system. We will now add that repository to your system-wide list.
       actions:
         - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-  check-user-flathub:
-    source: yafti.screen.consent
-    values:
-      title: Missing Flathub Repository (User)
-      condition:
-        run: flatpak remotes --user --columns=name | grep flathub | wc -l | grep '^0$'
-      description: |
-        We have detected that you don't have Flathub's repository on your current user account. We will now add that repository to your account.
-      actions:
-        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
   applications:
     source: yafti.screen.package
     values:
@@ -81,11 +70,11 @@ screens:
           description: System applications for all desktop environments.
           default: true
           packages:
-            - Deja Dup Backups: org.gnome.DejaDup
+           # - Deja Dup Backups: org.gnome.DejaDup
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
             - Font Downloader: org.gustavoperedo.FontDownloader
-            - Mozilla Firefox: org.mozilla.firefox
+           # - Mozilla Firefox: org.mozilla.firefox
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
