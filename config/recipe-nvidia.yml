@@ -108,14 +108,10 @@ modules:
         - com.obsproject.Studio.Plugin.GStreamerVaapi
         - org.libreoffice.LibreOffice
         - com.github.IsmaelMartinez.teams_for_linux
-        - com.visualstudio.code
-        - com.visualstudio.code.tool.podman
-        - com.freedesktop.Sdk.Extension.texlive
-      remove:
-        - org.gnome.eog
 
   - type: script
     scripts:
       - docker-compose.sh
+      - post-install.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh

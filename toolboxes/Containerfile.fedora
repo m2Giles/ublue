@@ -1,0 +1,30 @@
+# FROM ghcr.io/m2giles/fedora-distrobox:latest
+FROM quay.io/fedora/fedora-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="A cloud-native terminal experience and exported apps powered by Fedora"
+
+COPY ./toolboxes/packages.fedora /toolbox-packages
+COPY ./toolboxes/etc/yum.repos.d/vscode.repo /etc/yum.repos.d/vscode.repo
+
+RUN dnf -y upgrade && \
+    dnf -y install $(<toolbox-packages) && \
+    dnf clean all
+
+RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz" && \
+  tar -xzf /tmp/starship.tar.gz -C /tmp && \
+  install -c -m 0755 /tmp/starship /usr/bin 
+
+RUN ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && \
+    ln -sf /etc/alternatives/ld /usr/bin/ld
+
+RUN ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker-compose && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xdg-open
+
+RUN rm -f /toolbox-packages && \
+    rm -f /etc/yum.repos.d/vscode.repo && \
+    rm -rf /tmp/* /var/*
