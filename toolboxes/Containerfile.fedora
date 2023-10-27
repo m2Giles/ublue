@@ -1,5 +1,5 @@
 # FROM ghcr.io/m2giles/fedora-distrobox:latest
-FROM quay.io/fedora/fedora-toolbox:latest
+FROM quay.io/fedora/fedora-toolbox
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
