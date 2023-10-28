@@ -19,10 +19,9 @@ modules:
                   # configuration you wish to end up in /etc/ on the booted system
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
-
+      - usr/etc/yum.repos.d: /etc/yum.repos.d
   - type: rpm-ostree
     repos:
-      - https://packages.microsoft.com/yumrepos/vscode
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
@@ -54,7 +53,7 @@ modules:
       - samba-ldb-ldap-modules
       - samba-winbind-clients
       - samba-winbind-modules
-      - smaba
+      - samba
       # Pano
       - libgda-sqlite
       - libgda
@@ -68,7 +67,7 @@ modules:
       # Tailscale
       - tailscale
       # Chrome
-      - google-chrome-stable
+      # - google-chrome-stable
     remove:
       - gnome-software-rpm-ostree
       - gnome-tour
@@ -147,3 +146,11 @@ modules:
         - com.github.IsmaelMartinez.teams_for_linux
     
   - type: script
+    scripts:
+      - alternatives-workarounds.sh
+      - docker-compose.sh
+      - pano.sh
+      - image-info.sh
+      - post-install.sh
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh
