@@ -29,7 +29,6 @@ modules:
       - gnome-shell-extension-blur-my-shell
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-just-perfection
-      - gnome-shell-extension-tailscale-status
       # GTK-Theme
       - gnome-themes-extra
       # Podman
