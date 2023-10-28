@@ -22,7 +22,6 @@ modules:
       - usr/etc/yum.repos.d: /etc/yum.repos.d
   - type: rpm-ostree
     repos:
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       # GNOME Extensions
