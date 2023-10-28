@@ -126,12 +126,6 @@ modules:
         - com.github.tchx84.Flatseal
         - org.fedoraproject.MediaWriter
         - io.missioncenter.MissionCenter
-      remove:
-        - org.gnome.Cheese
-        - org.gnome.eog
-
-  - type: yafti
-    custom-flatpaks:
         - com.sindresorhus.Caprine
         - com.discordapp.Discord
         - org.gnome.World.PikaBackuprita
@@ -142,6 +136,12 @@ modules:
         - org.libreoffice.LibreOffice
         - dev.alextren.Spot
         - com.github.IsmaelMartinez.teams_for_linux
+      remove:
+        - org.gnome.Cheese
+        - org.gnome.eog
+
+  - type: yafti
+    custom-flatpaks:
     
   - type: script
     scripts:
