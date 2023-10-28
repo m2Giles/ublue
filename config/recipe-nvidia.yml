@@ -22,6 +22,9 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://dl.google.com/linux/chrome/rpm/stable/x86_64/
+      - https://packages.microsoft.com/yumrepos/vscode
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       # GNOME Extensions
@@ -29,24 +32,48 @@ modules:
       - gnome-shell-extension-blur-my-shell
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-just-perfection
+      - gnome-shell-extension-tailscale-status
       # GTK-Theme
       - gnome-themes-extra
       # Podman
       - podman-plugins
       - podman-tui
       # Utils
-      - iotop
       - dbus-x11
+      - git-credential-libsecret
+      - iotop
+      - libxcrypt-compat
+      - mesa-libGLU
       - pulseaudio-utils
       - p7zip
       - p7zip-plugins
-      - git-credential-libsecret
+      - tmux
+      - wireguard-tools
+      - wl-clipboard
+      # Samba
+      - samba-dcerpc
+			- samba-ldb-ldap-modules
+			- samba-winbind-clients
+			- samba-winbind-modules
+      - smaba
+			# Pano
+      - libgda-sqlite
+      - libgda
       # Starship
       - starship
       # Firefox Extensions
       - mozilla-ublock-origin
       - mozilla-privacy-badger
+      # VSCode
+      - code
+      # Tailscale
+      - tailscale
+      # Chrome
+      - google-chrome-stable
     remove:
+      - gnome-extensions-app
+      - gnome-software-rpm-ostree
+      - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -67,51 +94,66 @@ modules:
         - JetBrainsMono
         - NerdFontsSymbolsOnly
 
+  - type: systemd
+    system:
+      enabled:
+        - ublue-system-setup.service
+        - ublue-update.timer
+        - tailscaled.service
+    user:
+      enabled:
+        - podman.socket
+
   - type: default-flatpaks
     system:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
-      repo-title: "Flathub (system-wide)"
+      repo-title: "Flathub (system)"
       install:
-        # Gnome Applications
+        - org.freedesktop.Platform.ffmpeg-full//22.08
+        - com.raggesilver.BlackBox
         - org.gnome.Calculator
         - org.gnome.Calendar
-        - org.gnome.Snapshot
         - org.gnome.Characters
-        - org.gnome.clocks
         - org.gnome.Connections
         - org.gnome.Contacts
-        - org.gnome.baobab
-        - org.gnome.SimpleScan
         - org.gnome.Evince
-        - com.mattjakeman.ExtensionManager
-        - org.gnome.font-viewer
         - org.gnome.Loupe
         - org.gnome.Logs
         - org.gnome.Maps
-        - org.gnome.Photos
         - org.gnome.NautilusPreviewer
         - org.gnome.TextEditor
-        - org.gnome.Totem
         - org.gnome.Weather
-        # System Applications
-        - org.fedoraproject.MediaWriter
+        - org.gnome.baobab
+        - org.gnome.clocks
+        - org.gnome.font-viewer
+        - com.mattjakeman.ExtensionManager
         - com.github.tchx84.Flatseal
-        - org.gustavoperedo.FontDownloader
-        - org.gnome.World.PikaBackuprita
-        # User Applications
+        - org.fedoraproject.MediaWriter
+        - io.missioncenter.MissionCenter
+      remove:
+        - org.gnome.Cheese
+        - org.gnome.eog
+
+  - type: yafti
+    custom-flatpaks:
         - com.sindresorhus.Caprine
         - com.discordapp.Discord
-        - com.raggesilver.BlackBox
+        - org.gnome.World.PikaBackuprita
         - com.obsproject.Studio
+        - com.obsproject.Studio.OBSVkCapture
         - com.obsproject.Studio.Plugin.Gstreamer
         - com.obsproject.Studio.Plugin.GStreamerVaapi
         - org.libreoffice.LibreOffice
+        - dev.alextren.Spot
         - com.github.IsmaelMartinez.teams_for_linux
-
+    
   - type: script
     scripts:
+      - alternatives-workarounds.sh
       - docker-compose.sh
+      - pano.sh
+      - image-info.sh
       - post-install.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh

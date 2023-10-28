@@ -1,5 +1,4 @@
 # This is the Containerfile for your custom image.
-# This is the Containerfile for your custom image.
 
 # Instead of adding RUN statements here, you should consider creating a script
 # in `config/scripts/`. Read more in `modules/script/README.md`
