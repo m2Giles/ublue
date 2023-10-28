@@ -8,6 +8,7 @@ set -oue pipefail
 # Remove Unnecessary desktop entries from overview
 rm -f /usr/share/applications/htop.desktop
 rm -f /usr/share/applications/nvtop.desktop
+rm -f /usr/share/applications/org.gnome.Extensions.desktop
 
 # Remove repo files
 rm -f /etc/yum.repos.d/**

@@ -70,7 +70,6 @@ modules:
       # Chrome
       - google-chrome-stable
     remove:
-      - gnome-extensions-app
       - gnome-software-rpm-ostree
       - gnome-tour
 
