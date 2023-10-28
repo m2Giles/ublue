@@ -52,11 +52,11 @@ modules:
       - wl-clipboard
       # Samba
       - samba-dcerpc
-			- samba-ldb-ldap-modules
-			- samba-winbind-clients
-			- samba-winbind-modules
+      - samba-ldb-ldap-modules
+      - samba-winbind-clients
+      - samba-winbind-modules
       - smaba
-			# Pano
+      # Pano
       - libgda-sqlite
       - libgda
       # Starship
@@ -149,11 +149,3 @@ modules:
         - com.github.IsmaelMartinez.teams_for_linux
     
   - type: script
-    scripts:
-      - alternatives-workarounds.sh
-      - docker-compose.sh
-      - pano.sh
-      - image-info.sh
-      - post-install.sh
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
