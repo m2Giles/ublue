@@ -12,12 +12,6 @@
 ARG IMAGE_MAJOR_VERSION="${IMAGE_MAJOR_VERSION:-38}"
 ARG BASE_IMAGE_URL="${BASE_IMAGE_URL:-ghcr.io/ublue-os/silverblue-main}"
 
-ARG IMAGE_NAME="${IMAGE_NAME}"
-ARG IMAGE_VENDOR="${IMAGE_VENDOR}"
-ARG IMAGE_FLAVOR="${IMAGE_FLAVOR}"
-ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME}"
-ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
-
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 
 # The default recipe is set to the recipe's default filename
@@ -25,6 +19,13 @@ FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 ARG RECIPE=recipe.yml 
 # The default image registry to write to policy.json and cosign.yaml
 ARG IMAGE_REGISTRY=ghcr.io/ublue-os
+
+# Set Environment Variables
+ARG IMAGE_NAME="${IMAGE_NAME}"
+ARG IMAGE_VENDOR="${IMAGE_VENDOR}"
+ARG IMAGE_FLAVOR="${IMAGE_FLAVOR}"
+ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME}"
+ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 
 
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
@@ -50,5 +51,4 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
-    chmod +x /tmp/config/scripts/image-info.sh && /tmp/config/scripts/image-info.sh && \
     rm -rf /tmp/* /var/* && ostree container commit
