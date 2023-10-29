@@ -50,4 +50,5 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
+    chmod +x /tmp/config/scripts/image-info.sh && /tmp/config/scripts/image-info.sh && \
     rm -rf /tmp/* /var/* && ostree container commit
