@@ -13,6 +13,7 @@ IMAGE_REF="ostree-image-signed:docker://ghcr.io/$IMAGE_VENDOR/$IMAGE_NAME"
 #     IMAGE_TAG="$FEDORA_MAJOR_VERSION"
 #     ;;
 # esac
+# "image-tag":"$IMAGE_TAG",
 
 cat > $IMAGE_INFO <<EOF
 {
@@ -20,7 +21,6 @@ cat > $IMAGE_INFO <<EOF
   "image-flavor": "$IMAGE_FLAVOR",
   "image-vendor": "$IMAGE_VENDOR",
   "image-ref": "$IMAGE_REF",
-  "image-tag":"$IMAGE_TAG",
   "base-image-name": "$BASE_IMAGE_NAME",
   "fedora-version": "$FEDORA_MAJOR_VERSION"
 }
