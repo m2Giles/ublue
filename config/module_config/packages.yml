@@ -49,5 +49,6 @@ install:
   # Chrome
   # - google-chrome-stable
 remove:
+  - distrobox
   - gnome-software-rpm-ostree
   - gnome-tour
