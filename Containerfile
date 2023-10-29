@@ -9,8 +9,14 @@
 # does nothing if the image is built in the cloud.
 
 # !! Warning: changing these might not do anything for you. Read comment above.
-ARG IMAGE_MAJOR_VERSION=38
-ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
+ARG IMAGE_MAJOR_VERSION="${IMAGE_MAJOR_VERSION:-38}"
+ARG BASE_IMAGE_URL="${BASE_IMAGE_URL:-ghcr.io/ublue-os/silverblue-main}"
+
+ARG IMAGE_NAME="${IMAGE_NAME}"
+ARG IMAGE_VENDOR="${IMAGE_VENDOR}"
+ARG IMAGE_FLAVOR="${IMAGE_FLAVOR}"
+ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME}"
+ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 

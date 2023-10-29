@@ -151,6 +151,7 @@ jobs:
           build-args: |
             IMAGE_NAME=${{ env.IMAGE_NAME }}
             IMAGE_VENDOR=${{ steps.registry_case.outputs.lowercase }}
+            IMAGE_FLAVOR=${{ env.IMAGE_FLAVOR }}
             FEDORA_MAJOR_VERSION=${{ env.IMAGE_MAJOR_VERSION }}
             IMAGE_MAJOR_VERSION=${{ env.IMAGE_MAJOR_VERSION }}
             BASE_IMAGE_URL=${{ env.BASE_IMAGE_URL }}
