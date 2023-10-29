@@ -1,0 +1,8 @@
+type: fonts
+fonts:
+  nerd-fonts:
+    - CascadiaCode
+    - FiraCode
+    - Hack
+    - JetBrainsMono
+    - NerdFontsSymbolsOnly
