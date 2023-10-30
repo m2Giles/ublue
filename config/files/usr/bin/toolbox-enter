@@ -18,7 +18,7 @@ else
     # or below we need to assemble all the entries that occur in the `distrobox.ini` manifest. 
     # In future versions of distrobox we will be able to specify `--name $container_name` to
     # only assemble the box we want to enter.
-    distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
+    distrobox assemble create --replace --file /etc/distrobox/distrobox.ini --name "${container_name}" 
 
     # All done, good to go
     exec distrobox enter "${container_name}"
