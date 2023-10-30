@@ -15,6 +15,7 @@ on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-wor
       - main
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
+      - "**.fedora"
   pull_request:
   workflow_dispatch:
 

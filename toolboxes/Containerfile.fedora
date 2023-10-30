@@ -23,17 +23,17 @@ RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/dis
     rm -drf /tmp/distrobox && \
     dnf install -y 'dnf-command(copr)'
 
-RUN dnf copr enable -y atim/lazygit && \
-    dnf copr enable -y kylegospo/distrobox-utils && \
+RUN dnf copr enable -y kylegospo/distrobox-utils && \
+    dnf remove -y \
+        xdg-utils && \
     dnf install -y \
-        lazygit \
         xdg-utils-distrobox \
         adw-gtk3-theme && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker-compose && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/xdg-open
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/flatpak
+
+RUN dnf copr enable -y atim/lazygit && \
+    dnf install -y \
+    lazygit
 
 RUN dnf install -y \
         https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
