@@ -50,7 +50,7 @@ install:
   - cmake
   - libtool
   # Chromium
-  - chromium
+  - chromium-freeworld
   - fedora-chromium-config
   - fedora-chromium-config-gnome
   - fedora-chromium-config-gssapi

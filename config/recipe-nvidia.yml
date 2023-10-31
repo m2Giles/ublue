@@ -13,7 +13,7 @@ flavor: nvidia
 modules:
   - from-file: module_config/files.yml
   - from-file: module_config/packages.yml
-  - from-file: module_config/google-chrome.yml
+  # - from-file: module_config/google-chrome.yml
   - from-file: module_config/bling.yml
   - from-file: module_config/fonts.yml
   - from-file: module_config/systemd.yml
