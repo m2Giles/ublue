@@ -42,12 +42,16 @@ install:
   # Firefox Extensions
   - mozilla-ublock-origin
   - mozilla-privacy-badger
+  # Emacs
+  - emacs
+  - cmake
+  - libtool-bin
   # VSCode
   - code
   # Tailscale
   - tailscale
   # Chrome
-  # - google-chrome-stable
+  - google-chrome-stable
 remove:
   - distrobox
   - gnome-software-rpm-ostree
