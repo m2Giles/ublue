@@ -1,7 +1,6 @@
 type: script
 scripts:
   - alternatives-workarounds.sh
-  - google-chrome.sh
   - docker-compose.sh
   - pano.sh
   # - image-info.sh

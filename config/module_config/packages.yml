@@ -12,6 +12,8 @@ install:
   - gnome-shell-extension-tailscale-status
   # GTK-Theme
   - gnome-themes-extra
+  # Repo Font
+  - liberation-fonts
   # Podman
   - podman-plugins
   - podman-tui
@@ -57,7 +59,7 @@ install:
   - docker-compose-plugin
   - containerd.io
   # Installed using a script
-  # Chrome
+  # - broken Chrome
   # Docker Compose
   # Pano Gnome Extension
 
