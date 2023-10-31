@@ -28,6 +28,7 @@ install:
   - p7zip
   - p7zip-plugins
   - tmux
+  - util-linux-user
   - wireguard-tools
   - wl-clipboard
   # Samba
@@ -48,16 +49,21 @@ install:
   - emacs
   - cmake
   - libtool
+  # Chromium
+  - chromium
+  - fedora-chromium-config
+  - fedora-chromium-config-gnome
+  - fedora-chromium-config-gssapi
   # VSCode
   - code
   # Tailscale
   - tailscale
   # Docker
+  - containerd.io
+  - docker-buildx-plugin
   - docker-ce
   - docker-ce-cli
-  - docker-buildx-plugin
   - docker-compose-plugin
-  - containerd.io
   # Installed using a script
   # - broken Chrome
   # Docker Compose
