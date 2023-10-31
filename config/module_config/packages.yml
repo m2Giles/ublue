@@ -50,8 +50,17 @@ install:
   - code
   # Tailscale
   - tailscale
+  # Docker
+  - docker-ce
+  - docker-ce-cli
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - containerd.io
+  # Installed using a script
   # Chrome
-  - google-chrome-stable
+  # Docker Compose
+  # Pano Gnome Extension
+
 remove:
   - distrobox
   - gnome-software-rpm-ostree
