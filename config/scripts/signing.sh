@@ -10,8 +10,6 @@ cp /usr/share/ublue-os/cosign.pub /usr/etc/pki/containers/"$IMAGE_NAME".pub
 
 FILE=/usr/etc/containers/policy.json
 
-IAMGE_FLAVOR="$(yq '.flavor' "/tmp/config/$RECIPE")"
-
 yq -i -o=j '.transports.docker |=
     {"'"$IMAGE_REGISTRY"'/'"$IMAGE_NAME"'": [
             {

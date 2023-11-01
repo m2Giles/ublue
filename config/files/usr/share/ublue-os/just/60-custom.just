@@ -43,3 +43,13 @@ brew-shell:
 distrobox-universal:
   echo 'Creating Universal Development distrobox ...'
   distrobox create --image mcr.microsoft.com/devcontainers/universal:latest -n universal -Y
+
+# Enable Docker
+docker:
+  sudo systemctl enable --now docker
+  sudo usermod -aG docker $USER
+  newgrp docker
+
+# Disable Docker
+disable-docker:
+  sudo systemctl disable --now docker
