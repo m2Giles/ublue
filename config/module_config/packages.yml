@@ -64,8 +64,6 @@ install:
   - docker-ce
   - docker-ce-cli
   - docker-compose-plugin
-  # Google-Chrome
-  - google-chrome-stable
   # Installed using a script
   # - broken Chrome
   # Docker Compose
