@@ -17,6 +17,7 @@ dbus-x11
 diffstat
 diffutils
 elfutils
+emacs
 eza
 fd-find
 findutils
