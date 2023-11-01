@@ -23,9 +23,9 @@ RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/dis
     rm -drf /tmp/distrobox && \
     dnf install -y 'dnf-command(copr)'
 
-RUN wget https://github.com/neovide/neovide/releases/latest/download/neovide-linux-x86_64.tar.gz -O /tmp/neovide && \
-    tar -xvf /tmp/neovide && \
-    install -c -m 0755 /tmp/neovide /usr/bin
+RUN dnf config-manager -y --add-repo https://terra.fyralabs.com/terra.repo && \
+    dnf install -y \
+        neovide
 
 RUN dnf copr enable -y kylegospo/distrobox-utils && \
     dnf remove -y \

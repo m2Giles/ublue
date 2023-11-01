@@ -7,6 +7,11 @@ assemble:
   echo 'Assembling and replacing distroboxes ...'
   distrobox assemble create --replace --file /usr/etc/distrobox/distrobox.ini
 
+# Replace Fedora distrobox
+replace-fedora:
+  echo 'Replacing Fedora Distrobox'
+  distrobox assemble create --replace --file /usr/etc/distrobox/distrobox.ini --name fedora
+
 # Install Homebrew for Linux
 brew:
   echo "Installing homebrew ..."
