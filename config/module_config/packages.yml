@@ -46,9 +46,9 @@ install:
   - mozilla-ublock-origin
   - mozilla-privacy-badger
   # Emacs
-  # - emacs
-  # - cmake
-  # - libtool
+  - emacs
+  - cmake
+  - libtool
   # Chromium
   - chromium
   - fedora-chromium-config
