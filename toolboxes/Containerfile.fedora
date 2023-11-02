@@ -33,7 +33,11 @@ RUN dnf copr enable -y kylegospo/distrobox-utils && \
     dnf install -y \
         xdg-utils-distrobox \
         adw-gtk3-theme && \
-    ln -sf /usr/bin/distrobox-host-exec /usr/bin/flatpak
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/flatpak && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/podman && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker-compose && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/rpm-ostree
 
 RUN dnf copr enable -y atim/lazygit && \
     dnf install -y \
