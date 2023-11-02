@@ -5,7 +5,7 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-rpm-ostree install $(curl https://github.com/loft-sh/devpod/releases/download/v0.3.7/DevPod_linux_x86_64.rpm) 
+rpm-ostree install $(curl -L https://github.com/loft-sh/devpod/releases/download/v0.3.7/DevPod_linux_x86_64.rpm) 
 wget https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-amd64 -O /tmp/devpod
 install -c -m 0755 /tmp/devpod /usr/bin
 
