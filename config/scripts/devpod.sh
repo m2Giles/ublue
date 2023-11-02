@@ -7,7 +7,7 @@ set -oue pipefail
 
 wget https://github.com/loft-sh/devpod/releases/latest/download/DevPod_linux_x86_64.tar.gz -O /tmp/devpod.tar.gz
 mkdir /tmp/devpod-package
-tar -xvf /tmp/devpod.tar.gz -C /tmp/devpod
+tar -xvf /tmp/devpod.tar.gz -C /tmp/devpod-package
 cp /tmp/devpod-package/usr/bin/{dev-pod,devpod-cli} /usr/bin/
 cp /tmp/devpod-package/usr/share/applications/** /usr/share/applications/
 cp /tmp/devpod-package/usr/share/glib-2.0/** /usr/share/glib-2.0/
