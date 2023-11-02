@@ -18,4 +18,10 @@ custom-flatpaks:
     - Syncthing (File Syncing): me.kozec.syncthingtk
     - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
     - Podman Desktop (Graphical Container Frontend): io.podman_desktop.PodmanDesktop
+    # Emacs/Toolchains
+    - Emacs: org.gnu.emacs
+    - SDK Latex: org.freedesktop.Sdk.Extension.texlive//22.08
+    - SDK Node18: org.freedesktop.Sdk.Extension.node//22.08
+    - SDK Rust: org.freedesktop.Sdk.Extension.rust-stable//22.08
+    - SDK LLVM: org.freedesktop.Sdk.Extension.llvm15//22.08
 

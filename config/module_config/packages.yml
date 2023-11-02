@@ -45,10 +45,6 @@ install:
   # Firefox Extensions
   - mozilla-ublock-origin
   - mozilla-privacy-badger
-  # Emacs
-  - emacs
-  - cmake
-  - libtool
   # Chromium
   - chromium
   - fedora-chromium-config
@@ -65,8 +61,6 @@ install:
   - docker-ce-cli
   - docker-compose-plugin
   # Installed using a script
-  # - broken Chrome
-  # Docker Compose
   # Pano Gnome Extension
 
 remove:
