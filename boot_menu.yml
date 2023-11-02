@@ -1,5 +1,11 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: m2giles/m2-ublue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: m2-ublue
+        info: GNOME
+  - label: m2giles/m2-ublue-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: m2-ublue-nvidia
+        info: GNOME (nvidia)

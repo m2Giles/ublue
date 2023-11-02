@@ -1,0 +1,10 @@
+type: script
+scripts:
+  - alternatives-workarounds.sh
+  # - docker-compose.sh
+  - devpod.sh
+  - pano.sh
+  # - image-info.sh
+  - post-install.sh
+  # this sets up the proper policy & signing files for signed images to work
+  - signing.sh

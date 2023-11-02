@@ -1,0 +1,56 @@
+# FROM ghcr.io/m2giles/fedora-distrobox:latest
+ARG FEDORA_VERSION=39
+FROM quay.io/fedora/fedora-toolbox:${FEDORA_VERSION}
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="A cloud-native terminal experience and exported apps powered by Fedora"
+
+COPY ./toolboxes/packages.fedora /toolbox-packages
+
+RUN dnf -y upgrade && \
+    dnf -y install $(<toolbox-packages) && \
+    dnf clean all
+
+RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz" && \
+  tar -xzf /tmp/starship.tar.gz -C /tmp && \
+  install -c -m 0755 /tmp/starship /usr/bin 
+
+RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/distrobox && \
+    cp /tmp/distrobox/distrobox-host-exec /usr/bin/distrobox-host-exec && \
+    wget https://github.com/1player/host-spawn/releases/download/$(cat /tmp/distrobox/distrobox-host-exec | grep host_spawn_version= | cut -d "\"" -f 2)/host-spawn-$(uname -m) -O /usr/bin/host-spawn && \
+    chmod +x /usr/bin/host-spawn && \
+    rm -drf /tmp/distrobox && \
+    dnf install -y 'dnf-command(copr)'
+
+RUN dnf config-manager -y --add-repo https://terra.fyralabs.com/terra.repo && \
+    dnf install -y \
+        neovide
+
+RUN dnf copr enable -y kylegospo/distrobox-utils && \
+    dnf remove -y \
+        xdg-utils && \
+    dnf install -y \
+        xdg-utils-distrobox \
+        adw-gtk3-theme && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/flatpak && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/podman && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker-compose && \
+    ln -sf /usr/bin/distrobox-host-exec /usr/bin/rpm-ostree
+
+RUN dnf copr enable -y atim/lazygit && \
+    dnf install -y \
+    lazygit
+
+RUN dnf install -y \
+        https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+        https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
+    dnf install -y \
+        intel-media-driver \
+        nvidia-vaapi-driver && \
+    dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld && \
+    dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+
+RUN rm -f /toolbox-packages && \
+    rm -rf /tmp/* /var/*

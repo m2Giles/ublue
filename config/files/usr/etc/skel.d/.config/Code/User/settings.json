@@ -1,0 +1,7 @@
+{
+    "dev.containers.dockerComposePath": "docker-compose",
+    "dev.containers.dockerPath": "podman",
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true
+}

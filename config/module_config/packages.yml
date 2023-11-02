@@ -1,0 +1,82 @@
+type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/ublue-os/distrobox-git/repo/fedora-%OS_VERSION%/ublue-os-distrobox-git-fedora-%OS_VERSION%.repo
+install:
+  # GNOME Extensions
+  - gnome-shell-extension-appindicator
+  - gnome-shell-extension-blur-my-shell
+  - gnome-shell-extension-caffeine
+  - gnome-shell-extension-just-perfection
+  - gnome-shell-extension-tailscale-status
+  # GTK-Theme
+  - gnome-themes-extra
+  # Repo Font
+  - liberation-fonts
+  # Podman
+  - podman-plugins
+  - podman-tui
+  # Utils
+  - dbus-x11
+  - distrobox-git
+  - git-credential-libsecret
+  - iotop
+  - libxcrypt-compat
+  - mesa-libGLU
+  - pulseaudio-utils
+  - p7zip
+  - p7zip-plugins
+  - tmux
+  - util-linux-user
+  - wireguard-tools
+  - wl-clipboard
+  # Samba
+  - samba-dcerpc
+  - samba-ldb-ldap-modules
+  - samba-winbind-clients
+  - samba-winbind-modules
+  - samba
+  # Pano
+  - libgda-sqlite
+  - libgda
+  # Starship
+  - starship
+  # Firefox Extensions
+  - mozilla-ublock-origin
+  - mozilla-privacy-badger
+  # Emacs
+  - emacs
+  - cmake
+  - libtool
+  # Chromium
+  - chromium
+  - fedora-chromium-config
+  - fedora-chromium-config-gnome
+  - fedora-chromium-config-gssapi
+  # VSCode
+  - code
+  # Tailscale
+  - tailscale
+  # Docker
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-ce
+  - docker-ce-cli
+  - docker-compose-plugin
+  # Dev Pod Dependencies
+  - gtk-immodules-imsettings
+  - gtk3-immodules
+  - javascriptcoregtk4.0
+  - libdeflate
+  - libwmf
+  - webkit2gtk4.0
+  # Installed using a script
+  # - broken Chrome
+  # Docker Compose
+  # Pano Gnome Extension
+
+remove:
+  - distrobox
+  - gnome-software-rpm-ostree
+  - gnome-tour

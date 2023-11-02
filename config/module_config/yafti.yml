@@ -1,0 +1,21 @@
+type: yafti
+custom-flatpaks:
+    # Chat Applications
+    - Discord: com.discordapp.Discord
+    - Teams: com.github.IsmaelMartinez.teams_for_linux
+    - Messanger: com.sindresorhus.Caprine
+    # OBS
+    - OBS Studio: com.obsproject.Studio
+    - VkCapture for OBS: com.obsproject.Studio.Plugin.OBSVkCapture
+    - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
+    - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
+    # Media
+    - Spot (GTK4 Spotify Client): dev.alextren.Spot
+    # LibreOffice
+    - Libreoffice: org.libreoffice.LibreOffice
+    # Utilities
+    - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
+    - Syncthing (File Syncing): me.kozec.syncthingtk
+    - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
+    - Podman Desktop (Graphical Container Frontend): io.podman_desktop.PodmanDesktop
+
