@@ -11,11 +11,11 @@ custom-flatpaks:
     - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
     # Media
     - Spot (GTK4 Spotify Client): dev.alextren.Spot
-    - Mpv (Media Player): io.mpv.Mpv
     # LibreOffice
     - Libreoffice: org.libreoffice.LibreOffice
     # Utilities
     - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
     - Syncthing (File Syncing): me.kozec.syncthingtk
     - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
+    - Podman Desktop (Graphical Container Frontend): io.podman_desktop.PodmanDesktop
 

@@ -64,6 +64,13 @@ install:
   - docker-ce
   - docker-ce-cli
   - docker-compose-plugin
+  # Dev Pod Dependencies
+  - gtk-immodules-imsettings
+  - gtk3-immodules
+  - javascriptcoregtk4.0
+  - libdeflate
+  - libwmf
+  - webkit2gtk4.0
   # Installed using a script
   # - broken Chrome
   # Docker Compose

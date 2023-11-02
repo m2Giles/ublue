@@ -1,7 +1,8 @@
 type: script
 scripts:
   - alternatives-workarounds.sh
-  - docker-compose.sh
+  # - docker-compose.sh
+  - devpod.sh
   - pano.sh
   # - image-info.sh
   - post-install.sh
