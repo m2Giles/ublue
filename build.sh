@@ -51,12 +51,11 @@ run_modules() {
 }
 
 # Declare dynamically generated variables as exported
-declare -x IMAGE_NAME BASE_IMAGE OS_VERSION IMAGE_FLAVOR
+declare -x IMAGE_NAME BASE_IMAGE OS_VERSION
 
 # Read configuration variables.
 BASE_IMAGE="$(yq '.base-image' "$RECIPE_FILE")"
 IMAGE_NAME="$(yq '.name' "$RECIPE_FILE")"
-IMAGE_FLAVOR="$(yq '.flavor' "$RECIPE_FILE")"
 
 # Automatically determine which Fedora version we're building.
 OS_VERSION="$(grep -Po '(?<=VERSION_ID=)\d+' /usr/lib/os-release)"

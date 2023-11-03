@@ -1,8 +1,6 @@
 type: systemd
 system:
   enabled:
-    # - ublue-system-setup.service
-    - ublue-update.timer
     - tailscaled.service
 user:
   enabled:
