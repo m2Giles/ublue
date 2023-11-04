@@ -19,9 +19,8 @@ RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/dis
 
 # Set up cleaner Distrobox integration
 RUN dnf copr enable -y kylegospo/distrobox-utils && \
-    dnf install -y \
-        xdg-utils-distrobox \
-        adw-gtk3-theme && \
+    dnf swap -y xdg-utils xdg-utils-distrobox && \
+    dnf install -y adw-gtk3-theme && \
     ln -s /usr/bin/distrobox-host-exec /usr/bin/flatpak
 
 RUN dnf copr enable -y atim/lazygit && \
