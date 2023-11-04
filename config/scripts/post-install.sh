@@ -13,6 +13,9 @@ rm -f /usr/share/applications/org.gnome.Extensions.desktop
 # Remove repo files
 rm -f /etc/yum.repos.d/**
 
+# Symlink Yafti
+ln -s /usr/share/ublue-os/firstboot/yafti.yml /etc/yafti.yml
+
 # Speedup Shutdown and style os-release
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=30s/' /etc/systemd/user.conf
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=30s/' /etc/systemd/system.conf

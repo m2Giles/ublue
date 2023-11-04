@@ -67,3 +67,6 @@ remove:
   - distrobox
   - gnome-software-rpm-ostree
   - gnome-tour
+
+optfix:
+  - google
