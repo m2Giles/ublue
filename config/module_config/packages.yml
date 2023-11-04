@@ -18,15 +18,20 @@ install:
   - podman-plugins
   - podman-tui
   # Utils
+  - bat
   - dbus-x11
   - distrobox-git
+  - fd-find
+  - gh
   - git-credential-libsecret
+  - glab
   - iotop
   - libxcrypt-compat
   - mesa-libGLU
   - pulseaudio-utils
   - p7zip
   - p7zip-plugins
+  - ripgrep
   - tmux
   - util-linux-user
   - wireguard-tools
@@ -61,6 +66,7 @@ install:
   - docker-ce-cli
   - docker-compose-plugin
   # Installed using a script
+  # Google-Chrome see optfix
   # Pano Gnome Extension
 
 remove:
