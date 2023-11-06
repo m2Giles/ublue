@@ -28,13 +28,13 @@ rpm-ostree install google-chrome-stable
 rm /etc/yum.repos.d/google-chrome.repo -f
 
 # And then we do the hacky dance!
-mv /var/opt/google /usr/lib/google # move this over here
+mv /var/opt/google /usr/lib/opt/google # move this over here
 
 #####
 # Register path symlink
 # We do this via tmpfiles.d so that it is created by the live system.
 cat >/usr/lib/tmpfiles.d/google.conf <<EOF
-L  /opt/google  -  -  -  -  /usr/lib/google
+L  /opt/google  -  -  -  -  /usr/lib/opt/google
 EOF
 
 # Reference
