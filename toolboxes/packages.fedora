@@ -63,7 +63,7 @@ neovim
 python-neovim
 python-pip
 ripgrep
-texlive-scheme-full
+texlive-scheme-medium
 tmux
 vim
 wl-clipboard
