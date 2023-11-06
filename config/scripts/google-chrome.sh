@@ -4,7 +4,6 @@ set -ouex pipefail
 
 echo "Installing Google Chrome"
 
-
 # Setup repo
 cat << EOF > /etc/yum.repos.d/google-chrome.repo
 [google-chrome]
@@ -22,16 +21,21 @@ curl --retry 3 --retry-delay 2 --retry-all-errors -sL \
   https://dl.google.com/linux/linux_signing_key.pub
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-google
 
-# Install
+# Now let's install the packages.
 rpm-ostree install google-chrome-stable
 
-# Remove Repo
-rm -f /etc/yum.repos.d/google-chrome.repo
+# Clean up the yum repo (updates are baked into new images)
+rm /etc/yum.repos.d/google-chrome.repo -f
 
-# Move to /usr
-mv /var/opt/google /usr/lib/google
+# And then we do the hacky dance!
+mv /var/opt/google /usr/lib/google # move this over here
 
-# Register Symlink
+#####
+# Register path symlink
+# We do this via tmpfiles.d so that it is created by the live system.
 cat >/usr/lib/tmpfiles.d/google.conf <<EOF
 L  /opt/google  -  -  -  -  /usr/lib/google
 EOF
+
+# Reference
+# https://github.com/bsherman/ublue-custom/blob/main/install-google-chrome.sh
