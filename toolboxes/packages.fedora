@@ -51,6 +51,7 @@ vulkan
 bat
 cargo
 clang
+clang-tools-extra
 conda
 eza
 fzf
@@ -60,6 +61,7 @@ git-credential-libsecret
 glab
 just
 neovim
+nodejs
 python-neovim
 python-pip
 ripgrep
