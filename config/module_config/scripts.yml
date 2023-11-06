@@ -2,7 +2,8 @@ type: script
 scripts:
   # this sets up the proper policy & signing files for signed images to work
   - signing.sh
-  - alternatives-workarounds.sh
+  # - alternatives-workarounds.sh
+  - emacs.sh
   - devpod.sh
   - google-chrome.sh
   - pano.sh

@@ -49,6 +49,8 @@ mesa-dri-drivers
 mesa-vulkan-drivers
 vulkan
 bat
+cargo
+clang
 conda
 eza
 fzf
@@ -61,6 +63,7 @@ neovim
 python-neovim
 python-pip
 ripgrep
+texlive-scheme-full
 tmux
 vim
 wl-clipboard
