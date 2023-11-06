@@ -14,6 +14,7 @@ clock-show-weekday=true
 font-antialiasing="rgba"
 monospace-font-name="CaskaydiaCove Nerd Font 12"
 color-scheme="prefer-dark"
+gtk-theme="adw-gtk3-dark"
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
@@ -27,10 +28,13 @@ switch-windows-backward = ['<Shift><Alt>Tab']
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
 
+[org/gnome/desktop/default-applications/terminal]
+exec='wezterm'
+
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
-command='flatpak run com.raggesilver.BlackBox --command "toolbox-enter fedora"'
-name='blackbox fedora'
+command='wezterm'
+name='launch terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Control><Shift>Escape'
