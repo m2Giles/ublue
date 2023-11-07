@@ -5,6 +5,6 @@ scripts:
   # - alternatives-workarounds.sh
   # - emacs.sh
   - devpod.sh
-  - google-chrome.sh
+  # - google-chrome.sh
   - pano.sh
   - post-install.sh

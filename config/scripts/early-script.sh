@@ -2,6 +2,10 @@
 
 set -ouex pipefail
 
-echo "Setting up Directories for opt and alternatives"
-mkdir -p /var/opt
+echo "Setting up Directories alternatives"
 mkdir -p /var/lib/alternatives
+echo "Getting Google Signing Key"
+curl --retry 3 --retry-delay 2 --retry-all-errors -sL \
+  -o /etc/pki/rpm-gpg/RPM-GPG-KEY-google \
+  https://dl.google.com/linux/linux_signing_key.pub
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-google

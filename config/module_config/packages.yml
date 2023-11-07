@@ -69,6 +69,8 @@ install:
   - docker-ce
   - docker-ce-cli
   - docker-compose-plugin
+  # Google-Chrome
+  - google-chrome-stable
   # # Emacs - Use Script for swap to 29.1
   # - emacs
   # - libtool
@@ -82,5 +84,5 @@ remove:
   - gnome-software-rpm-ostree
   - gnome-tour
 
-# optfix:
-#   - google
+optfix:
+  - google

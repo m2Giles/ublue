@@ -13,6 +13,12 @@ rm -f /usr/share/applications/org.gnome.Extensions.desktop
 # Remove repo files
 rm -f /etc/yum.repos.d/**
 
+# mv over /etc files
+cp -r "/var/lib/alternatives" "/usr/share/alternatives"
+
+# Starship in /etc/bashrc
+echo 'eval "$(starship init bash)"' >> /etc/bashrc
+
 # Symlink Yafti
 ln -s /usr/share/ublue-os/firstboot/yafti.yml /etc/yafti.yml
 
