@@ -6,3 +6,10 @@ fonts:
     - Hack
     - JetBrainsMono
     - NerdFontsSymbolsOnly
+  google-fonts:
+    - Noto Color Emoji
+    - Noto Sans
+    - Noto Sans Math
+    - Noto Sans Serif
+    - Open Sans
+    - Roboto

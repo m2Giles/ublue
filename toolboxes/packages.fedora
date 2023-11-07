@@ -52,6 +52,7 @@ bat
 cargo
 clang
 clang-tools-extra
+cmake
 conda
 eza
 fzf
@@ -60,6 +61,8 @@ git
 git-credential-libsecret
 glab
 just
+libtool
+make
 neovim
 nodejs
 python-neovim

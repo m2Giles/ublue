@@ -6,10 +6,12 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY ./toolboxes/packages.fedora /toolbox-packages
 
+# Install Packages
 RUN dnf -y upgrade && \
     dnf -y install $(<toolbox-packages) && \
     dnf clean all
 
+# Get Host-Spawn for distrobox-host-exec
 RUN git clone https://github.com/89luca89/distrobox.git --single-branch /tmp/distrobox && \
     cp /tmp/distrobox/distrobox-host-exec /usr/bin/distrobox-host-exec && \
     wget https://github.com/1player/host-spawn/releases/download/$(cat /tmp/distrobox/distrobox-host-exec | grep host_spawn_version= | cut -d "\"" -f 2)/host-spawn-$(uname -m) -O /usr/bin/host-spawn && \
@@ -23,14 +25,20 @@ RUN dnf copr enable -y kylegospo/distrobox-utils && \
     dnf install -y adw-gtk3-theme && \
     ln -s /usr/bin/distrobox-host-exec /usr/bin/flatpak
 
-RUN dnf copr enable -y atim/lazygit && \
-    dnf install -y \
-    lazygit
+# Install Emacs
+RUN dnf copr enable -y stevenlin/emacs-pgtk-nativecomp && \
+    dnf install -y emacs
 
+# Install Lazygit
+RUN dnf copr enable -y atim/lazygit && \
+    dnf install -y lazygit
+
+# Install Starship
 RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz" && \
   tar -xzf /tmp/starship.tar.gz -C /tmp && \
   install -c -m 0755 /tmp/starship /usr/bin 
 
+# Install Neovide via Terra-Labs
 RUN dnf config-manager -y --add-repo https://terra.fyralabs.com/terra.repo && \
     dnf install -y \
         neovide
@@ -45,11 +53,13 @@ RUN dnf install -y \
     dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld && \
     dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
+# Convenience scripts
 RUN ln -sf /usr/bin/distrobox-host-exec /usr/bin/podman && \
     ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker && \
     ln -sf /usr/bin/distrobox-host-exec /usr/bin/docker-compose && \
     ln -sf /usr/bin/distrobox-host-exec /usr/bin/rpm-ostree
 
+# Cleanup
 RUN rm -f /toolbox-packages && \
     dnf clean all && \
     rm -rf /tmp/* /var/*
