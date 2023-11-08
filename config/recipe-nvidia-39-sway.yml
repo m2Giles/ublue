@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: m2-ublue-nvidia
+name: m2-ublue-sway-nvidia
 # description will be included in the image's metadata
 description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: 38 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/sericea-nvidia
+image-version: 39 # latest is also supported if you want new updates ASAP
 flavor: nvidia
 
 # module configuration, executed in order
@@ -14,7 +14,7 @@ modules:
   - from-file: module_config/files.yml
   - from-file: module_config/early-script.yml
   - from-file: module_config/packages.yml
-  - from-file: module_config/packages-gnome.yml
+  - from-file: module_config/nvidia-sway.yml
   - from-file: module_config/bling.yml
   - from-file: module_config/fonts.yml
   - from-file: module_config/systemd.yml

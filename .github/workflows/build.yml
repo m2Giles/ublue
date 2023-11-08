@@ -43,6 +43,7 @@ jobs:
           - recipe.yml
           - recipe-nvidia.yml
           - recipe-nvidia-39.yml
+          - recipe-nvidia-39-sway.yml
 # !!!
 
     steps:
