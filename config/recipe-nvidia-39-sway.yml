@@ -20,4 +20,4 @@ modules:
   - from-file: module_config/systemd.yml
   - from-file: module_config/flatpak.yml
   - from-file: module_config/yafti.yml
-  - from-file: module_config/scripts.yml
+  - from-file: module_config/scripts-sway.yml
