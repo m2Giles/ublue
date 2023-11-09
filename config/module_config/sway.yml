@@ -1,5 +1,15 @@
-type: files
-files:
-  - nvidia/sway-nvidia.sh: /usr/bin/sway-nvidia
-  - nvidia/sway-nvidia.desktop: /usr/share/wayland-sessions/sway-nvidia.desktop
-  - nvidia/wlroots-env-nvidia.sh: /usr/share/wlroots-nvidia/wlroots-env-nvidia.sh
+# type: files
+# files:
+#   - nvidia/sway-nvidia.sh: /usr/bin/sway-nvidia
+#   - nvidia/sway-nvidia.desktop: /usr/share/wayland-sessions/sway-nvidia.desktop
+#   - nvidia/wlroots-env-nvidia.sh: /usr/share/wlroots-nvidia/wlroots-env-nvidia.sh
+modules:
+  type: files
+  files:
+    - sway/etc/yum.repos.d: /etc/yum.repos.d
+
+  type: rpm-ostree
+  install:
+    - insync
+    - nomacs
+    - zenity
