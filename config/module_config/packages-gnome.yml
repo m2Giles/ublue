@@ -8,6 +8,7 @@ install:
   - gnome-shell-extension-blur-my-shell
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-just-perfection
+  - gnome-shell-extension-tailscale-gnome-qs
   - gnome-shell-extension-tailscale-status
   - nautilus-python
 remove:

@@ -25,4 +25,4 @@ ln -s /usr/share/ublue-os/firstboot/yafti.yml /etc/yafti.yml
 # Speedup Shutdown and style os-release
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=30s/' /etc/systemd/user.conf
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=30s/' /etc/systemd/system.conf
-sed -i '/^PRETTY_NAME/s/Silverblue/m2-ublue/' /usr/lib/os-release
+sed -i '/^PRETTY_NAME/s/Silverblue/m2-ublue-silverblue/' /usr/lib/os-release

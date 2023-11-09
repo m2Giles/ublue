@@ -6,5 +6,6 @@ scripts:
   # - emacs.sh
   - devpod.sh
   # - google-chrome.sh
+  - forge.sh
   - pano.sh
   - post-install.sh

@@ -41,10 +41,13 @@ jobs:
         # Don't add module configuration files, you will get errors.
         recipe:
           - recipe.yml
+          - recipe-sway
           - recipe-nvidia.yml
+          - recipe-nvidia-sway.yml
+          - recipe-39.yml
           - recipe-39-sway.yml
-          - recipe-nvidia-39.yml
-          - recipe-nvidia-39-sway.yml
+          - recipe-39-nvidia.yml
+          - recipe-39-nvidia-sway.yml
 # !!!
 
     steps:
