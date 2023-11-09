@@ -17,7 +17,6 @@ install:
   - dbus-x11
   - distrobox-git
   - fd-find
-  - gettext
   - gh
   - git-credential-libsecret
   - glab
@@ -39,9 +38,6 @@ install:
   - samba-winbind-clients
   - samba-winbind-modules
   - samba
-  # Pano
-  - libgda-sqlite
-  - libgda
   # Starship
   - starship
   # Firefox Extensions
@@ -62,18 +58,5 @@ install:
   - docker-ce
   - docker-ce-cli
   - docker-compose-plugin
-  # Google-Chrome - Download gpg key in early script
-  - google-chrome-stable
-  # Emacs - Use Script for swap to PGTK
-  - emacs
-  - libtool
-  - cmake
-  - make
-  # Installed using a script
-  # Pano Gnome Extension
-
 remove:
   - distrobox
-
-optfix:
-  - google

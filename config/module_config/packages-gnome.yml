@@ -11,6 +11,21 @@ install:
   - gnome-shell-extension-tailscale-gnome-qs
   - gnome-shell-extension-tailscale-status
   - nautilus-python
+  # Google-Chrome - Download gpg key in early script
+  - google-chrome-stable
+  # Emacs - Use Script for swap to PGTK
+  - emacs
+  - libtool
+  - cmake
+  - make
+  # Pano Dependencies
+  - libgda-sqlite
+  - libgda
+  # Pano Gnome Extension Installed using a script
+  # Forge Dependencies
+  - gettext
 remove:
   - gnome-software-rpm-ostree
   - gnome-tour
+optfix:
+  - google

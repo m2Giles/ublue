@@ -13,3 +13,7 @@ modules:
       - insync
       - nomacs
       - zenity
+  
+  - type: yafti-google-chrome
+    google-chrome-flatpak:
+      - Google Chrome: com.google.Chrome
