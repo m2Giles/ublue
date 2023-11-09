@@ -99,7 +99,11 @@ jobs:
           # --
 
           BUILD_TAGS+=("${TIMESTAMP}")
-          BUILD_TAGS+=("latest")
+          if [[ "${MAJOR_VERSION}" == "39" ]]; then
+            BUILD_TAGS+=("latest")
+          else; then
+            BUILD_TAGS+=("gts")
+          fi
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               echo "Generated the following commit tags: "
