@@ -101,7 +101,7 @@ jobs:
           BUILD_TAGS+=("${TIMESTAMP}")
           if [[ "${MAJOR_VERSION}" == "39" ]]; then
             BUILD_TAGS+=("latest")
-          else; then
+          else
             BUILD_TAGS+=("gts")
           fi
 
