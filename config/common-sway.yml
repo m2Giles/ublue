@@ -1,0 +1,3 @@
+modules:
+  - from-file: module_config/sway.yml
+  - from-file: module_config/scripts-sway.yml

@@ -8,4 +8,4 @@ scripts:
   # - google-chrome.sh
   - forge.sh
   - pano.sh
-  - post-install.sh
+  - post-install-gnome.sh

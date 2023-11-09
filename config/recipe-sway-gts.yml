@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: m2-ublue-sway-nvidia
+name: m2-ublue-sway
 # description will be included in the image's metadata
 description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
 
@@ -11,13 +11,5 @@ flavor: main
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: module_config/files.yml
-  - from-file: module_config/early-script.yml
-  - from-file: module_config/packages.yml
-  - from-file: module_config/sway.yml
-  - from-file: module_config/bling.yml
-  - from-file: module_config/fonts.yml
-  - from-file: module_config/systemd.yml
-  - from-file: module_config/flatpak.yml
-  - from-file: module_config/yafti.yml
-  - from-file: module_config/scripts-sway.yml
+  - from-file: common.yml
+  - from-file: common-sway.yml

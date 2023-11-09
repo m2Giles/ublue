@@ -42,12 +42,12 @@ jobs:
         recipe:
           - recipe.yml
           - recipe-sway.yml
-          - recipe-nvidia.yml
-          - recipe-nvidia-sway.yml
-          - recipe-39.yml
-          - recipe-39-sway.yml
-          - recipe-39-nvidia.yml
-          - recipe-39-nvidia-sway.yml
+          - recipe-gnome-nvidia.yml
+          - recipe-sway-nvidia.yml
+          - recipe-gnome-gts.yml
+          - recipe-sway-gts.yml
+          - recipe-gnome-nvidia-gts.yml
+          - recipe-sway-nvidia-gts.yml
 # !!!
 
     steps:

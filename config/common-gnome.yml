@@ -1,0 +1,3 @@
+modules:
+  - from-file: module_config/packages-gnome.yml
+  - from-file: module_config/scripts-gnome.yml
