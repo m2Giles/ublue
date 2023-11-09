@@ -3,6 +3,7 @@
 # Tell build process to exit if there are any errors.
 set -oue pipefail
 
+FIRSTBOOT_DATA="/usr/share/ublue-os/firstboot"
 YAFTI_FILE="$FIRSTBOOT_DATA/yafti.yml"
 
 get_yaml_array FLATPAKS '.google-chrome-flatpak[]' "$1"
