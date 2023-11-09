@@ -2,22 +2,14 @@ ublue_variants:
   - label: m2giles/main
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: m2-ublue:latest
+      - label: m2-ublue
         info: GNOME
-      - label: m2-ublue-sway:latest
-        info: Sway
-      - label: m2-ublue:gts
-        info: GNOME
-      - label: m2-ublue-sway:gts
+      - label: m2-ublue-sway
         info: Sway
   - label: m2giles/nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
-      - label: m2-ublue-nvidia:latest
+      - label: m2-ublue-nvidia
         info: GNOME (nvidia)
-      - label: m2-ublue-nvidia-sway:latest
-        info: Sway (nvidia)
-      - label: m2-ublue-nvidia:gts
-        info: GNOME (nvidia)
-      - label: m2-ublue-nvidia-sway:gts
+      - label: m2-ublue-nvidia-sway
         info: Sway (nvidia)
