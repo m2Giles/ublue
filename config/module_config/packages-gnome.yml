@@ -11,13 +11,15 @@ install:
   - gnome-shell-extension-tailscale-gnome-qs
   - gnome-shell-extension-tailscale-status
   - nautilus-python
+  # Email
+  - evolution-ews
   # Google-Chrome - Download gpg key in early script
   - google-chrome-stable
-  # Emacs - Use Script for swap to PGTK
-  - emacs
-  - libtool
-  - cmake
-  - make
+  # # Emacs - Use Script for swap to PGTK
+  # - emacs
+  # - libtool
+  # - cmake
+  # - make
   # Pano Dependencies
   - libgda-sqlite
   - libgda

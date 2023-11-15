@@ -11,7 +11,7 @@ rm -f /usr/share/applications/nvtop.desktop
 rm -f /usr/share/applications/org.gnome.Extensions.desktop
 
 # Remove repo files
-rm -f /etc/yum.repos.d/**
+# rm -f /etc/yum.repos.d/**
 
 # mv over /etc files
 cp -r "/var/lib/alternatives" "/usr/share/alternatives"
